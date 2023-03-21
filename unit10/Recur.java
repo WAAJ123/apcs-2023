@@ -3,7 +3,7 @@ package unit10;
 public class Recur {
 
     public static int fun3(int n) {
-        System.out.prinln("entered fun3("+(n-1)+")");
+        System.out.println("entered fun3("+(n-1)+")");
         if (n == 0) {
             System.out.println("returned 1");
             return 1;
