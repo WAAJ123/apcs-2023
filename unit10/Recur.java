@@ -14,7 +14,7 @@ public class Recur {
         }
     }
 
-    // f(3) = ???
+    // f(3) = 1
     // called f(3)
     // return f(2) + f(1) == 2
     // f(2) will return f(1) + f(0) == 1 
