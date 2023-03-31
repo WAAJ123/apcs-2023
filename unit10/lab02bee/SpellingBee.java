@@ -82,7 +82,7 @@ public class SpellingBee {
         System.out.println("word is " + words[guess]);
         System.out.println("check is " + check);
         while  (check != 0) {
-            if (guess < 0) {
+            if (check < 0) {
                 begin = guess;
             }
             else if (check > 0) {
