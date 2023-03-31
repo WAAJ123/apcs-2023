@@ -64,36 +64,36 @@ public class SpellingBee {
             }
         }
   
-        // Arrays.sort(words);
-        // // linear search
-        // int n = 0;
-        // for (String word : words) {
-        //     n++;
-        //     if (word.equals("potato")) {
-        //     //    System.out.println("found potato at " + n);
-        //     }
-        // }
-        // String findMe = "potato";
+        Arrays.sort(words);
+        // linear search
+        int n = 0;
+        for (String word : words) {
+            n++;
+            if (word.equals("potato")) {
+            //    System.out.println("found potato at " + n);
+            }
+        }
+        String findMe = "potato";
 
-        // int begin = 0;
-        // int end = words.length - 1;
-        // int guess = (begin + end) / 2;
-        // int check = words[guess].compareTo(findMe);
-        // System.out.println("word is " + words[guess]);
-        // System.out.println("check is " + check);
-        // while  (check != 0) {
-        //     if (guess < 0) {
-        //         begin = guess;
-        //     }
-        //     else if (check > 0) {
-        //         end = guess;
-        //     }
-        //     guess = (begin + end) / 2;
-        //     check = words[guess].compareTo(findMe);
-        //     System.out.println("word is " + words[guess]);
-        //     System.out.println("check is " + check);
-        // }
-        // begin = guess;
+        int begin = 0;
+        int end = words.length - 1;
+        int guess = (begin + end) / 2;
+        int check = words[guess].compareTo(findMe);
+        System.out.println("word is " + words[guess]);
+        System.out.println("check is " + check);
+        while  (check != 0) {
+            if (guess < 0) {
+                begin = guess;
+            }
+            else if (check > 0) {
+                end = guess;
+            }
+            guess = (begin + end) / 2;
+            check = words[guess].compareTo(findMe);
+            System.out.println("word is " + words[guess]);
+            System.out.println("check is " + check);
+        }
+        begin = guess;
 
     }
 }
