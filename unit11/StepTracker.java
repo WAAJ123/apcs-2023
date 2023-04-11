@@ -3,9 +3,19 @@ package unit11;
 // 2019 FRQ #2
 // https://apcentral.collegeboard.org/media/pdf/ap19-frq-computer-science-a.pdf#page=7
 public class StepTracker {
-
     // TODO implement me!
+    private int activeDays;
+    private int addDailySteps;
+    private double averageSteps;
 
+    public StepTracker(int aDays, int dSteps, double aSteps) {
+        activeDays = aDays;
+        addDailySteps = dSteps;
+        averageSteps = aSteps;
+    }
+
+
+    //LEAVE THIS ALONE
     public static void check(boolean test) throws AssertionError {
         if (!test)
             throw new AssertionError("bad panda");
