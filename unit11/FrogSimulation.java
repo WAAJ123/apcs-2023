@@ -74,17 +74,12 @@ public class FrogSimulation {
     public double runSimulations(int num) {
         /* to be implemented in part (b) */
         int frogPass = 0;
-        int frogFail = 0;
         for (int check = 0; check < num; check++) {
-            if (simulate() == true) {
+            if (simulate()) {
                 frogPass++;
             }
-            else {
-                frogFail++;
-            }
         }
-        double frogRatio = frogPass / num;
-        return frogRatio; // replace me!
+        return (1.0*frogPass)/num;
     }
 
     public static void check(boolean test) throws AssertionError {
