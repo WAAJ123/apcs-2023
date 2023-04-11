@@ -73,6 +73,13 @@ public class FrogSimulation {
      */
     public double runSimulations(int num) {
         /* to be implemented in part (b) */
+        int frogPass = 0;
+        int frogFail = 0;
+        for (int check = 0; check < num; check++) {
+            if (simulate() == true) {
+                
+            }
+        }
         return -1; // replace me!
     }
 
