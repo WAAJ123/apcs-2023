@@ -77,10 +77,14 @@ public class FrogSimulation {
         int frogFail = 0;
         for (int check = 0; check < num; check++) {
             if (simulate() == true) {
-                
+                frogPass++;
+            }
+            else {
+                frogFail++;
             }
         }
-        return -1; // replace me!
+        double frogRatio = frogPass / num;
+        return frogRatio; // replace me!
     }
 
     public static void check(boolean test) throws AssertionError {
