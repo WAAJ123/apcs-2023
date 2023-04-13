@@ -55,12 +55,13 @@ public class FrogSimulation {
      */
     public boolean simulate() {
         /* to be implemented in part (a) */
-        while (leapCount < maxHops) {
+        int leaps = 0;
+        while (leaps < maxHops) {
             goalDistance = goalDistance - hopDistance();
             if (goalDistance <= 0) {
                     return true;
             }
-            leapCount++;
+            leaps++;
         }
         return false;
     }
