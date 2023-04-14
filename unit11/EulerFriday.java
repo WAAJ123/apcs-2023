@@ -1,4 +1,5 @@
 package unit11;
+import unit10.Recur;
 
 public class EulerFriday {
 
@@ -7,15 +8,74 @@ public class EulerFriday {
         // 1
         int sum = 0;
         for (int i = 0; i < 1000; i++) {
-
+            if (i % 3 == 0 || i % 5 == 0) {
+                sum += i;
+            }
         }
         System.out.println(sum);
 
         // 2
+        sum = 0;
+        int fibOne = 1;
+        int fibTwo = 2;
+        while (fibTwo < 4000000) {
+            if (fibTwo % 2 == 0) {
+                sum += fibTwo;
+            }
+            int temp = fibOne + fibTwo;
+            fibOne = fibTwo;
+            fibTwo = temp;
+        }
+        System.out.println(sum);
 
+        long factorMe = 600851475143l;
+        int factor = 2;
+        
+        //q3
+        while (factorMe > factor) {
+            if (factorMe % factor == 0) {
+                factorMe /= factor;
+            }
+            else {
+                factor++;
+            }
+        }
+        System.out.println(factor);
+
+
+        //q4
+        int largest = 0;
+        for (int i = 100; i <= 999; i++) {
+            for (int n = 100; n <= 999; n++) {
+                int product = i * n;
+                String sProd = Integer.toString(product);
+                if (Recur.pot(sProd)) {
+                    if (product > largest) {
+                        largest = product;
+                    }
+                }
+            }
+        }
+        System.out.println(largest);
     }
 
     static int[] prob8scaffold() {
+
+        public int gcd(int a, int b) {
+            if (a % b == 0) {
+                return b;
+            }
+            else {
+                return gcd(b, a % b);
+            }
+        }
+
+        public int lcm(int a, int b) {
+            return (a * b) / gcd(a,b);
+            
+        }
+
+
         // woo java 13 supports multi-line strings!
         String lines = """
                 73167176531330624919225119674426574742355349194934
