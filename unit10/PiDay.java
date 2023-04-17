@@ -5,7 +5,7 @@ public class PiDay {
     public static double piDay(int n, boolean subtract) {
       // TODO
       //base case to prevent stack overflow (though technically pi should have it)
-      if (n == 1000) {
+      if (n == 4/1001) {
         return ;
       }
       else {
