@@ -44,7 +44,9 @@ public class ClubMembers {
 
     public void addMembers(String[] names, int gradYear) {
         // TODO a
-
+        for (int n = 0; n < names.size; n++) {
+            
+        }
     }
 
     public ArrayList<MemberInfo> removeMembers(int year) {
