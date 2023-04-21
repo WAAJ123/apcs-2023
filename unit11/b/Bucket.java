@@ -5,6 +5,7 @@ public class Bucket {
     private int value;
 
     public Bucket(int value) {
+        //this. keyword means it refers to the class bucket
         this.value = value;
     }
 
@@ -40,7 +41,7 @@ public class Bucket {
     public static void main(String[] args) {
         // explore: predict before uncommenting
         int value = 3;
-        // value = 5;
+        value = 5;
         System.out.println(value);
 
         // System.out.println("Within method:");
