@@ -74,7 +74,7 @@ public class Scramble {
     }
 
     /**
-     * TODO how does this function work?
+     * how does this function work?
      * 
      * @param arr array of integers to shuffle
      */
