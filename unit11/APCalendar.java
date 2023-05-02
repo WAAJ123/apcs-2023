@@ -17,7 +17,14 @@ public class APCalendar {
 	 */
 	public static int numberOfLeapYears(int year1, int year2) {
 		/* to be implemented in part (a) */
-		return -1; // replace me!
+		int count = 0;
+		if(0 <= year1 && year1 <= year2){ 
+			for (int s = year1; s <= year2; s++){
+				if(isLeapYear(s))
+					count++;
+			}
+		}
+		return count;
 	}
 
 	/**
@@ -45,7 +52,7 @@ public class APCalendar {
 	 */
 	public static int dayOfWeek(int month, int day, int year) {
 		/* to be implemented in part (b) */
-		return -1; // replace me!
+		return (dayOfYear(month, day, year) + firstDayOfYear(year) - 1) % 7;
 	}
 
 	public static void check(boolean test) throws AssertionError {
