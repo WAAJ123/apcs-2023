@@ -5,15 +5,34 @@ package unit11;
 public class StepTracker {
     // TODO implement me!
     private int activeDays;
-    private int addDailySteps;
-    private double averageSteps;
+    private int days;
+    private int totalSteps;
+    private int min; 
 
-    public StepTracker(int aDays, int dSteps, double aSteps) {
-        activeDays = aDays;
-        addDailySteps = dSteps;
-        averageSteps = aSteps;
+    public StepTracker(int s){
+        min = s;
+        totalSteps = 0;
+        days = 0;
+        activeDays = 0;
     }
 
+    public void addDailySteps(int num){
+        days++;
+        totalSteps += num;
+        if(num >= min)
+            activeDays++;
+    }
+
+    public int activeDays(){
+        return activeDays;
+    }
+
+    public double averageSteps(){
+        if(totalSteps == 0)
+            return 0.0;
+        else 
+            return 1.0*totalSteps/days; 
+    }
 
     //LEAVE THIS ALONE
     public static void check(boolean test) throws AssertionError {
@@ -23,20 +42,20 @@ public class StepTracker {
 
     public static void main(String[] args) {
         // uncomment the following lines to test your code
-        // StepTracker tr = new StepTracker(10000);
-        // check(tr.activeDays() == 0);
-        // check(tr.averageSteps() == 0.0);
-        // tr.addDailySteps(9000);
-        // tr.addDailySteps(5000);
-        // check(tr.activeDays() == 0);
-        // check(tr.averageSteps() == 7000.0);
-        // tr.addDailySteps(13000);
-        // check(tr.activeDays() == 1);
-        // check(tr.averageSteps() == 9000.0);
-        // tr.addDailySteps(23000);
-        // tr.addDailySteps(1111);
-        // check(tr.activeDays() == 2);
-        // check(tr.averageSteps() == 10222.2);
-        // System.out.println("Happy Panda! \uD83D\uDC3C");
+        StepTracker tr = new StepTracker(10000);
+        check(tr.activeDays() == 0);
+        check(tr.averageSteps() == 0.0);
+        tr.addDailySteps(9000);
+        tr.addDailySteps(5000);
+        check(tr.activeDays() == 0);
+        check(tr.averageSteps() == 7000.0);
+        tr.addDailySteps(13000);
+        check(tr.activeDays() == 1);
+        check(tr.averageSteps() == 9000.0);
+        tr.addDailySteps(23000);
+        tr.addDailySteps(1111);
+        check(tr.activeDays() == 2);
+        check(tr.averageSteps() == 10222.2);
+        System.out.println("Happy Panda! \uD83D\uDC3C");
     }
 }
